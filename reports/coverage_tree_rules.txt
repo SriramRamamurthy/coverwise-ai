@@ -1,0 +1,46 @@
+|--- numeric__copayment_percentage <= 7.50
+|   |--- numeric__restoration_benefit_present <= 0.50
+|   |   |--- numeric__pre_existing_disease_waiting_period_months <= 42.00
+|   |   |   |--- numeric__premium_to_coverage_ratio <= 0.03
+|   |   |   |   |--- class: Moderate Coverage
+|   |   |   |--- numeric__premium_to_coverage_ratio >  0.03
+|   |   |   |   |--- class: Moderate Coverage
+|   |   |--- numeric__pre_existing_disease_waiting_period_months >  42.00
+|   |   |   |--- policy_type__policy_type_Family Floater <= 0.50
+|   |   |   |   |--- class: Caution Required
+|   |   |   |--- policy_type__policy_type_Family Floater >  0.50
+|   |   |   |   |--- class: Caution Required
+|   |--- numeric__restoration_benefit_present >  0.50
+|   |   |--- numeric__no_claim_bonus_present <= 0.50
+|   |   |   |--- numeric__exclusion_count <= 15.50
+|   |   |   |   |--- class: Strong Coverage
+|   |   |   |--- numeric__exclusion_count >  15.50
+|   |   |   |   |--- class: Moderate Coverage
+|   |   |--- numeric__no_claim_bonus_present >  0.50
+|   |   |   |--- numeric__disease_sub_limit_count <= 3.50
+|   |   |   |   |--- class: Strong Coverage
+|   |   |   |--- numeric__disease_sub_limit_count >  3.50
+|   |   |   |   |--- class: Moderate Coverage
+|--- numeric__copayment_percentage >  7.50
+|   |--- numeric__restoration_benefit_present <= 0.50
+|   |   |--- numeric__premium_to_coverage_ratio <= 0.03
+|   |   |   |--- numeric__disease_sub_limit_count <= 4.50
+|   |   |   |   |--- class: Caution Required
+|   |   |   |--- numeric__disease_sub_limit_count >  4.50
+|   |   |   |   |--- class: High Risk
+|   |   |--- numeric__premium_to_coverage_ratio >  0.03
+|   |   |   |--- numeric__copayment_percentage <= 17.50
+|   |   |   |   |--- class: Caution Required
+|   |   |   |--- numeric__copayment_percentage >  17.50
+|   |   |   |   |--- class: High Risk
+|   |--- numeric__restoration_benefit_present >  0.50
+|   |   |--- numeric__pre_existing_disease_waiting_period_months <= 30.00
+|   |   |   |--- numeric__copayment_percentage <= 22.50
+|   |   |   |   |--- class: Moderate Coverage
+|   |   |   |--- numeric__copayment_percentage >  22.50
+|   |   |   |   |--- class: Caution Required
+|   |   |--- numeric__pre_existing_disease_waiting_period_months >  30.00
+|   |   |   |--- numeric__exclusion_count <= 14.50
+|   |   |   |   |--- class: Moderate Coverage
+|   |   |   |--- numeric__exclusion_count >  14.50
+|   |   |   |   |--- class: Caution Required

@@ -1,0 +1,32 @@
+# Python environment and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local configuration
+.env
+.env.*
+!.env.example
+
+# Saved user data
+storage/
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+
+# Uploaded documents and generated PDFs
+data/sample_policies/
+uploads/
+*.pdf
+
+# Trained models: recreate using the training script
+models/
+*.joblib
+
+# Large optional dataset
+acko_dataset_modified.csv
+
+# macOS
+.DS_Store

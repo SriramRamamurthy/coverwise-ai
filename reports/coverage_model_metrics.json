@@ -1,0 +1,268 @@
+{
+  "random_seed": 42,
+  "training_records": 400,
+  "testing_records": 100,
+  "features": [
+    "policy_type",
+    "sum_insured",
+    "annual_premium",
+    "premium_to_coverage_ratio",
+    "waiting_period_months",
+    "pre_existing_disease_waiting_period_months",
+    "copayment_percentage",
+    "room_rent_limit_present",
+    "icu_limit_present",
+    "disease_sub_limit_count",
+    "exclusion_count",
+    "restoration_benefit_present",
+    "no_claim_bonus_present",
+    "child_coverage_present",
+    "maternity_coverage_present"
+  ],
+  "label_order": [
+    "Strong Coverage",
+    "Moderate Coverage",
+    "Caution Required",
+    "High Risk"
+  ],
+  "test_policy_ids": [
+    "CW-0376",
+    "CW-0191",
+    "CW-0066",
+    "CW-0350",
+    "CW-0225",
+    "CW-0205",
+    "CW-0118",
+    "CW-0070",
+    "CW-0097",
+    "CW-0063",
+    "CW-0099",
+    "CW-0064",
+    "CW-0283",
+    "CW-0172",
+    "CW-0242",
+    "CW-0277",
+    "CW-0361",
+    "CW-0416",
+    "CW-0246",
+    "CW-0178",
+    "CW-0150",
+    "CW-0076",
+    "CW-0270",
+    "CW-0500",
+    "CW-0156",
+    "CW-0498",
+    "CW-0131",
+    "CW-0065",
+    "CW-0393",
+    "CW-0417",
+    "CW-0301",
+    "CW-0190",
+    "CW-0315",
+    "CW-0049",
+    "CW-0392",
+    "CW-0459",
+    "CW-0363",
+    "CW-0130",
+    "CW-0489",
+    "CW-0314",
+    "CW-0451",
+    "CW-0328",
+    "CW-0080",
+    "CW-0482",
+    "CW-0263",
+    "CW-0401",
+    "CW-0352",
+    "CW-0014",
+    "CW-0380",
+    "CW-0167",
+    "CW-0419",
+    "CW-0010",
+    "CW-0078",
+    "CW-0452",
+    "CW-0092",
+    "CW-0153",
+    "CW-0436",
+    "CW-0074",
+    "CW-0048",
+    "CW-0336",
+    "CW-0254",
+    "CW-0071",
+    "CW-0294",
+    "CW-0466",
+    "CW-0266",
+    "CW-0134",
+    "CW-0326",
+    "CW-0359",
+    "CW-0272",
+    "CW-0415",
+    "CW-0127",
+    "CW-0104",
+    "CW-0476",
+    "CW-0402",
+    "CW-0268",
+    "CW-0174",
+    "CW-0460",
+    "CW-0447",
+    "CW-0096",
+    "CW-0126",
+    "CW-0424",
+    "CW-0213",
+    "CW-0100",
+    "CW-0346",
+    "CW-0072",
+    "CW-0135",
+    "CW-0405",
+    "CW-0491",
+    "CW-0117",
+    "CW-0145",
+    "CW-0033",
+    "CW-0216",
+    "CW-0311",
+    "CW-0435",
+    "CW-0012",
+    "CW-0124",
+    "CW-0016",
+    "CW-0367",
+    "CW-0455",
+    "CW-0075"
+  ],
+  "baseline": {
+    "accuracy": 0.36,
+    "macro_f1": 0.1323529411764706,
+    "classification_report": {
+      "Strong Coverage": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 35.0
+      },
+      "Moderate Coverage": {
+        "precision": 0.36,
+        "recall": 1.0,
+        "f1-score": 0.5294117647058824,
+        "support": 36.0
+      },
+      "Caution Required": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 22.0
+      },
+      "High Risk": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 7.0
+      },
+      "accuracy": 0.36,
+      "macro avg": {
+        "precision": 0.09,
+        "recall": 0.25,
+        "f1-score": 0.1323529411764706,
+        "support": 100.0
+      },
+      "weighted avg": {
+        "precision": 0.1296,
+        "recall": 0.36,
+        "f1-score": 0.19058823529411764,
+        "support": 100.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        35,
+        0,
+        0
+      ],
+      [
+        0,
+        36,
+        0,
+        0
+      ],
+      [
+        0,
+        22,
+        0,
+        0
+      ],
+      [
+        0,
+        7,
+        0,
+        0
+      ]
+    ]
+  },
+  "decision_tree": {
+    "accuracy": 0.51,
+    "macro_f1": 0.43058908175630384,
+    "classification_report": {
+      "Strong Coverage": {
+        "precision": 0.7241379310344828,
+        "recall": 0.6,
+        "f1-score": 0.65625,
+        "support": 35.0
+      },
+      "Moderate Coverage": {
+        "precision": 0.45652173913043476,
+        "recall": 0.5833333333333334,
+        "f1-score": 0.5121951219512195,
+        "support": 36.0
+      },
+      "Caution Required": {
+        "precision": 0.38095238095238093,
+        "recall": 0.36363636363636365,
+        "f1-score": 0.37209302325581395,
+        "support": 22.0
+      },
+      "High Risk": {
+        "precision": 0.25,
+        "recall": 0.14285714285714285,
+        "f1-score": 0.18181818181818182,
+        "support": 7.0
+      },
+      "accuracy": 0.51,
+      "macro avg": {
+        "precision": 0.4529030127793246,
+        "recall": 0.4224567099567099,
+        "f1-score": 0.43058908175630384,
+        "support": 100.0
+      },
+      "weighted avg": {
+        "precision": 0.5191056257585492,
+        "recall": 0.51,
+        "f1-score": 0.5086654817459908,
+        "support": 100.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        21,
+        13,
+        1,
+        0
+      ],
+      [
+        8,
+        21,
+        7,
+        0
+      ],
+      [
+        0,
+        11,
+        8,
+        3
+      ],
+      [
+        0,
+        1,
+        5,
+        1
+      ]
+    ]
+  }
+}
